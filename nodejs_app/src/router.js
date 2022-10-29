@@ -1,10 +1,18 @@
 const cors = require("cors");
+const AuthMiddleware = require("./middleware/auth");
+const AuthController = require("./controllers/auth");
 const UserController = require("./controllers/user");
 
 module.exports = Router = (express_app) => {
   express_app.use(cors());
 
   // routes
+
+  // auth
+  express_app.post("/auth/login", AuthController.login);
+
+  // auth middlewate
+  express_app.use(AuthMiddleware("user"));
 
   // users
   express_app.post("/user/create", UserController.create);
