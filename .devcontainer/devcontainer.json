@@ -1,0 +1,39 @@
+// Update the VARIANT arg in docker-compose.yml to pick a Node.js version
+{
+	"name": "college_system",
+	"dockerComposeFile": "docker-compose.yml",
+	"service": "app",
+	"workspaceFolder": "/workspace",
+	// Set *default* container specific settings.json values on container create.
+	"settings": {},
+	// Add the IDs of extensions you want installed when the container is created.
+	"extensions": [
+		"alphabotsec.vscode-eclipse-keybindings",
+		"christian-kohler.npm-intellisense",
+		"dbaeumer.vscode-eslint",
+		"dzannotti.vscode-babel-coloring",
+		"eg2.vscode-npm-script",
+		"esbenp.prettier-vscode",
+		"formulahendry.auto-close-tag",
+		"ionutvmi.path-autocomplete",
+		"jpruliere.env-autocomplete",
+		"leizongmin.node-module-intellisense",
+		"mikestead.dotenv",
+		"mongodb.mongodb-vscode",
+		"octref.vetur",
+		"redhat.fabric8-analytics",
+		"steoates.autoimport",
+		"vuetifyjs.vuetify-vscode",
+		"wayou.vscode-todo-highlight",
+		"whtouche.vscode-js-console-utils",
+		"wix.vscode-import-cost",
+		"ziyasal.vscode-open-in-github",
+		"hediet.vscode-drawio"
+	],
+
+	// Use 'postCreateCommand' to run commands after the container is created.
+	// "postCreateCommand": "yarn install",
+	// Comment out connect as root instead. More info: https://aka.ms/vscode-remote/containers/non-root.
+	"remoteUser": "node",
+
+}

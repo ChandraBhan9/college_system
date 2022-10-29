@@ -1,0 +1,19 @@
+# Replace example.com with your application's domain
+college_system.test:80 {
+	log
+  	respond "college_system Here"
+}
+
+*.college_system.test:80 {
+	log
+    # app domain
+    @college_system_api host college_system.test
+	handle @college_system_api {
+		reverse_proxy app:2124
+	}
+
+	# Fallback to tenant portal
+	handle {
+		reverse_proxy vuejs_tenant:8069
+	}
+}
