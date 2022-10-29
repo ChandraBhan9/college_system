@@ -23,5 +23,8 @@ const db = {};
 db.Sequelize = Sequelize;
 db.sequelize = sequelize;
 
+// register models
+db.users = require("../../models/user.js")(sequelize, Sequelize);
+
 sequelize.sync({ alter: true });
 module.exports = db;
