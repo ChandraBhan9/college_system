@@ -19,6 +19,12 @@ module.exports = Router = (express_app) => {
   express_app.post("/user/update", UserController.update);
   express_app.post("/user/list", UserController.list);
 
+  // course
+  express_app.post("/course/create", CourseController.create);
+  express_app.post("/course/update", CourseController.update);
+  express_app.post("/course/list", CourseController.list);
+  express_app.post("/course/enroll", CourseController.enroll);
+
   // invalid url
   express_app.use("*", (req, resp, next) => {
     throw resp.status(404).send({

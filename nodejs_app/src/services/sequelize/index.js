@@ -25,6 +25,16 @@ db.sequelize = sequelize;
 
 // register models
 db.users = require("../../models/user.js")(sequelize, Sequelize);
+db.user_role = require("../../models/user_role.js")(sequelize, Sequelize);
+db.courses = require("../../models/course.js")(sequelize, Sequelize);
+db.user_course = require("../../models/user_course.js")(sequelize, Sequelize);
+
+// register relation
+// user - course relation through user_course
+db.users.belongsToMany(db.courses, { through: db.user_course });
+
+// db.user_course.belongsTo(db.courses);
+// db.courses.hasMany(db.users, { through: db.user_course });
 
 sequelize.sync({ alter: true });
 module.exports = db;
