@@ -1,0 +1,1432 @@
+{
+	"info": {
+		"_postman_id": "c749ba30-56bd-4ce3-ab11-43b67d11b701",
+		"name": "College",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "user",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"chandr1a\",\n    \"email\": \"chandra2@gmail.com\",\n    \"phone\": \"7899877399\",\n    \"address\":{\n        \"pincode\": 311001,\n        \"city\": \"Bhilwara\",\n        \"state\": \"Rajasthan\"\n    },\n    \"enable\": true,\n    \"role\": \"student\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2124/user/create",
+							"host": [
+								"localhost"
+							],
+							"port": "2124",
+							"path": [
+								"user",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"chandr1a\",\n    \"email\": \"chandra2@gmail.com\",\n    \"phone\": \"7899877399\",\n    \"address\":{\n        \"pincode\": 311001,\n        \"city\": \"Bhilwara\",\n        \"state\": \"Rajasthan\"\n    },\n    \"enable\": true,\n    \"role\": \"student\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/user/create",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"user",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "309"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"135-r8pmowZNrUEC2YFF9DAfM/Kd4mA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:19:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Create successfully\",\n    \"data\": {\n        \"id\": 21,\n        \"email\": \"chandra2@gmail.com\",\n        \"phone\": \"7899877399\",\n        \"name\": \"chandr1a\",\n        \"address\": {\n            \"pincode\": 311001,\n            \"city\": \"Bhilwara\",\n            \"state\": \"Rajasthan\"\n        },\n        \"enable\": true,\n        \"password\": \"chandra2@gmail.com\",\n        \"updatedAt\": \"2022-10-29T11:19:33.224Z\",\n        \"createdAt\": \"2022-10-29T11:19:33.224Z\"\n    }\n}"
+						},
+						{
+							"name": "create auth fail",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xkd",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"chandr1a\",\n    \"email\": \"chandra2@gmail.com\",\n    \"phone\": \"7899877399\",\n    \"address\":{\n        \"pincode\": 311001,\n        \"city\": \"Bhilwara\",\n        \"state\": \"Rajasthan\"\n    },\n    \"enable\": true,\n    \"role\": \"student\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/user/create",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"user",
+										"create"
+									]
+								}
+							},
+							"status": "Payment Required",
+							"code": 402,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "68"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"44-emsMEkVSpL200KfY8BE7dkLYunQ\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:19:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Your session has been expired or invalid session data!\"\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"chandra update\",\n    \"email\": \"chandra@gmail.com\",\n    \"phone\": \"7899877899\",\n    \"address\":{\n        \"pincode\": 311001,\n        \"city\": \"Bhilwara\",\n        \"state\": \"Rajasthan\"\n    }\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2124/user/update",
+							"host": [
+								"localhost"
+							],
+							"port": "2124",
+							"path": [
+								"user",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"chandra update\",\n    \"email\": \"chandra@gmail.com\",\n    \"phone\": \"7899877899\",\n    \"address\":{\n        \"pincode\": 311001,\n        \"city\": \"Bhilwara\",\n        \"state\": \"Rajasthan\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/user/update",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "281"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"119-9AylrcoWT4yZOb5HwGb+c2H6zBI\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 07:09:26 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Update successfully\",\n    \"data\": {\n        \"id\": 3,\n        \"name\": \"chandra update\",\n        \"email\": \"chandra@gmail.com\",\n        \"phone\": \"7899877899\",\n        \"address\": {\n            \"city\": \"Bhilwara\",\n            \"state\": \"Rajasthan\",\n            \"pincode\": 311001\n        },\n        \"enable\": null,\n        \"createdAt\": \"2022-10-29T06:50:51.000Z\",\n        \"updatedAt\": \"2022-10-29T07:09:26.000Z\"\n    }\n}"
+						},
+						{
+							"name": "update validation fail",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"chandra update\",\n    \"phone\": \"7899877899\",\n    \"address\":{\n        \"pincode\": 311001,\n        \"city\": \"Bhilwara\",\n        \"state\": \"Rajasthan\"\n    }\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/user/update",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"user",
+										"update"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "55"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"37-igzl6wEWhGtFqjgnb4RJiqwmphE\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:19:12 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Validation Failed! field not found: email\"\n}"
+						}
+					]
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n          \"email\": \"admin@gmail.com\"\n  \n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2124/user/list",
+							"host": [
+								"localhost"
+							],
+							"port": "2124",
+							"path": [
+								"user",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list without filter",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/user/list",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"user",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "5941"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1735-YnFFX+AOQ8rx/xQaYRLD7gsWchM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:17:21 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 20,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"admin\",\n            \"email\": \"admin@gmail.com\",\n            \"phone\": \"7777777777\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"admin\",\n            \"createdAt\": \"2022-10-29T06:47:43.000Z\",\n            \"updatedAt\": \"2022-10-29T06:47:43.000Z\",\n            \"courses\": [\n                {\n                    \"id\": 2,\n                    \"uuid\": \"mt001\",\n                    \"name\": \"Maths\",\n                    \"noOfSeatsAvailable\": 10,\n                    \"createdAt\": \"2022-10-29T07:19:09.000Z\",\n                    \"updatedAt\": \"2022-10-29T07:19:24.000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 2,\n            \"name\": \"bhanu\",\n            \"email\": \"bhanu@gmail.com\",\n            \"phone\": \"7777777778\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": null,\n            \"createdAt\": \"2022-10-29T06:48:28.000Z\",\n            \"updatedAt\": \"2022-10-29T06:48:28.000Z\",\n            \"courses\": [\n                {\n                    \"id\": 1,\n                    \"uuid\": \"en001\",\n                    \"name\": \"English\",\n                    \"noOfSeatsAvailable\": 10,\n                    \"createdAt\": \"2022-10-29T07:18:53.000Z\",\n                    \"updatedAt\": \"2022-10-29T07:18:53.000Z\"\n                },\n                {\n                    \"id\": 2,\n                    \"uuid\": \"mt001\",\n                    \"name\": \"Maths\",\n                    \"noOfSeatsAvailable\": 10,\n                    \"createdAt\": \"2022-10-29T07:19:09.000Z\",\n                    \"updatedAt\": \"2022-10-29T07:19:24.000Z\"\n                }\n            ]\n        },\n        {\n            \"id\": 3,\n            \"name\": \"chandra update\",\n            \"email\": \"chandra@gmail.com\",\n            \"phone\": \"7899877899\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": null,\n            \"createdAt\": \"2022-10-29T06:50:51.000Z\",\n            \"updatedAt\": \"2022-10-29T07:09:26.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 4,\n            \"name\": \"chandra\",\n            \"email\": \"chandra@gmail.com\",\n            \"phone\": \"7899877899\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": null,\n            \"createdAt\": \"2022-10-29T10:18:27.000Z\",\n            \"updatedAt\": \"2022-10-29T10:18:27.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 5,\n            \"name\": \"chandr1a\",\n            \"email\": \"chandra1@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": null,\n            \"createdAt\": \"2022-10-29T10:19:38.000Z\",\n            \"updatedAt\": \"2022-10-29T10:19:38.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 6,\n            \"name\": \"chandr1a\",\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:23:01.000Z\",\n            \"updatedAt\": \"2022-10-29T10:23:01.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 7,\n            \"name\": \"chandr1a\",\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:26:22.000Z\",\n            \"updatedAt\": \"2022-10-29T10:26:22.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 8,\n            \"name\": \"chandr1a\",\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:26:44.000Z\",\n            \"updatedAt\": \"2022-10-29T10:26:44.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 9,\n            \"name\": null,\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:26:51.000Z\",\n            \"updatedAt\": \"2022-10-29T10:26:51.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 10,\n            \"name\": null,\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:27:41.000Z\",\n            \"updatedAt\": \"2022-10-29T10:27:41.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 11,\n            \"name\": null,\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:27:53.000Z\",\n            \"updatedAt\": \"2022-10-29T10:27:53.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 12,\n            \"name\": null,\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:28:17.000Z\",\n            \"updatedAt\": \"2022-10-29T10:28:17.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 13,\n            \"name\": null,\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:28:53.000Z\",\n            \"updatedAt\": \"2022-10-29T10:28:53.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 14,\n            \"name\": null,\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:29:15.000Z\",\n            \"updatedAt\": \"2022-10-29T10:29:15.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 15,\n            \"name\": null,\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:29:41.000Z\",\n            \"updatedAt\": \"2022-10-29T10:29:41.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 16,\n            \"name\": null,\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:31:26.000Z\",\n            \"updatedAt\": \"2022-10-29T10:31:26.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 17,\n            \"name\": \"chandr1a\",\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": true,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:34:19.000Z\",\n            \"updatedAt\": \"2022-10-29T10:34:19.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 18,\n            \"name\": \"chandr1a\",\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": true,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:43:20.000Z\",\n            \"updatedAt\": \"2022-10-29T10:43:20.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 19,\n            \"name\": \"chandr1a\",\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": true,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T10:44:08.000Z\",\n            \"updatedAt\": \"2022-10-29T10:44:08.000Z\",\n            \"courses\": []\n        },\n        {\n            \"id\": 20,\n            \"name\": \"chandr1a\",\n            \"email\": \"chandra2@gmail.com\",\n            \"phone\": \"7899877399\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": true,\n            \"password\": \"chandra2@gmail.com\",\n            \"createdAt\": \"2022-10-29T11:09:16.000Z\",\n            \"updatedAt\": \"2022-10-29T11:09:16.000Z\",\n            \"courses\": []\n        }\n    ]\n}"
+						},
+						{
+							"name": "list with filter",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n          \"email\": \"admin@gmail.com\"\n  \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/user/list",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"user",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "422"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1a6-BCm/W8APk5H3PQ+ubIn8o3lkwFc\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:18:13 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"admin\",\n            \"email\": \"admin@gmail.com\",\n            \"phone\": \"7777777777\",\n            \"address\": {\n                \"city\": \"Bhilwara\",\n                \"state\": \"Rajasthan\",\n                \"pincode\": 311001\n            },\n            \"enable\": null,\n            \"password\": \"admin\",\n            \"createdAt\": \"2022-10-29T06:47:43.000Z\",\n            \"updatedAt\": \"2022-10-29T06:47:43.000Z\",\n            \"courses\": [\n                {\n                    \"id\": 2,\n                    \"uuid\": \"mt001\",\n                    \"name\": \"Maths\",\n                    \"noOfSeatsAvailable\": 10,\n                    \"createdAt\": \"2022-10-29T07:19:09.000Z\",\n                    \"updatedAt\": \"2022-10-29T07:19:24.000Z\"\n                }\n            ]\n        }\n    ]\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "course",
+			"item": [
+				{
+					"name": "create",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Maths\",\n    \"uuid\": \"mt001\",\n    \"maxSeat\": \"10\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2124/course/create",
+							"host": [
+								"localhost"
+							],
+							"port": "2124",
+							"path": [
+								"course",
+								"create"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "create",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Maths\",\n    \"uuid\": \"mt001\",\n    \"maxSeat\": \"10\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/course/create",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"course",
+										"create"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "183"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b7-cCdx19raPJQdzQFBjpi4IHMCmtk\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:20:49 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Create successfully\",\n    \"data\": {\n        \"id\": 4,\n        \"uuid\": \"mt001\",\n        \"name\": \"Maths\",\n        \"noOfSeatsAvailable\": \"10\",\n        \"updatedAt\": \"2022-10-29T11:20:49.373Z\",\n        \"createdAt\": \"2022-10-29T11:20:49.373Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "update",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Maths\",\n    \"uuid\": \"mt001\",\n    \"maxSeat\": \"20\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2124/course/update",
+							"host": [
+								"localhost"
+							],
+							"port": "2124",
+							"path": [
+								"course",
+								"update"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "update",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"name\": \"Maths\",\n    \"uuid\": \"mt001\",\n    \"maxSeat\": \"20\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/course/update",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"course",
+										"update"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "181"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b5-Rb8dWJh8TiOWhinO7rgvGHZaXr8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 07:19:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Update successfully\",\n    \"data\": {\n        \"id\": 2,\n        \"uuid\": \"mt001\",\n        \"name\": \"Maths\",\n        \"noOfSeatsAvailable\": 20,\n        \"createdAt\": \"2022-10-29T07:19:09.000Z\",\n        \"updatedAt\": \"2022-10-29T07:19:24.000Z\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "list",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    //    \"uuid\": \"en001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2124/course/list",
+							"host": [
+								"localhost"
+							],
+							"port": "2124",
+							"path": [
+								"course",
+								"list"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "list no filter",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/course/list",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"course",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "582"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"246-8oaGbQsStYH8Hd3xBNui2WB6hfA\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:21:06 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 4,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"uuid\": \"en001\",\n            \"name\": \"English\",\n            \"noOfSeatsAvailable\": 10,\n            \"createdAt\": \"2022-10-29T07:18:53.000Z\",\n            \"updatedAt\": \"2022-10-29T07:18:53.000Z\"\n        },\n        {\n            \"id\": 2,\n            \"uuid\": \"mt001\",\n            \"name\": \"Maths\",\n            \"noOfSeatsAvailable\": 10,\n            \"createdAt\": \"2022-10-29T07:19:09.000Z\",\n            \"updatedAt\": \"2022-10-29T07:19:24.000Z\"\n        },\n        {\n            \"id\": 3,\n            \"uuid\": null,\n            \"name\": null,\n            \"noOfSeatsAvailable\": null,\n            \"createdAt\": \"2022-10-29T09:43:48.000Z\",\n            \"updatedAt\": \"2022-10-29T09:43:48.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"uuid\": \"mt001\",\n            \"name\": \"Maths\",\n            \"noOfSeatsAvailable\": 10,\n            \"createdAt\": \"2022-10-29T11:20:49.000Z\",\n            \"updatedAt\": \"2022-10-29T11:20:49.000Z\"\n        }\n    ]\n}"
+						},
+						{
+							"name": "list with filters",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n       \"name\": \"maths\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/course/list",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"course",
+										"list"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "302"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12e-Pdy/wpbBhjKInTEiOVGKm5AdRd8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:22:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"total\": 2,\n    \"data\": [\n        {\n            \"id\": 2,\n            \"uuid\": \"mt001\",\n            \"name\": \"Maths\",\n            \"noOfSeatsAvailable\": 10,\n            \"createdAt\": \"2022-10-29T07:19:09.000Z\",\n            \"updatedAt\": \"2022-10-29T07:19:24.000Z\"\n        },\n        {\n            \"id\": 4,\n            \"uuid\": \"mt001\",\n            \"name\": \"Maths\",\n            \"noOfSeatsAvailable\": 10,\n            \"createdAt\": \"2022-10-29T11:20:49.000Z\",\n            \"updatedAt\": \"2022-10-29T11:20:49.000Z\"\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "enroll",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"course_uuid\": \"mt001\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2124/course/enroll",
+							"host": [
+								"localhost"
+							],
+							"port": "2124",
+							"path": [
+								"course",
+								"enroll"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "enroll success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"course_uuid\": \"en001\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/course/enroll",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"course",
+										"enroll"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "152"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"98-CcMd9H6YC02y2SP9/dMyymztYpM\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:22:52 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Enroll successfully\",\n    \"data\": {\n        \"id\": 12,\n        \"userId\": 2,\n        \"courseId\": 1,\n        \"updatedAt\": \"2022-10-29T11:22:52.222Z\",\n        \"createdAt\": \"2022-10-29T11:22:52.222Z\"\n    }\n}"
+						},
+						{
+							"name": "enroll validate: all seat filled",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"course_uuid\": \"mt001\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/course/enroll",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"course",
+										"enroll"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "66"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"42-TWMuhDbgfmoRf/Nyru+PpqL4U/M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:22:23 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"All seats are filled, please enroll in other courses\"\n}"
+						},
+						{
+							"name": "enroll validation: invalid course",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "authorization",
+										"value": "bearer:eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQxNzk4LCJleHAiOjE2Njc2NDY1OTh9.EHsssfVl7LlzkkeMPkf7_2gM-mWtEyu6a_sQsC4G0Xk",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"course_uuid\": \"en002\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/course/enroll",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"course",
+										"enroll"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "31"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1f-7vUZwyryepq+MyUGkulErqVKXw8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:23:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid course id\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "auth",
+			"item": [
+				{
+					"name": "login",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"admin\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:2124/auth/login",
+							"host": [
+								"localhost"
+							],
+							"port": "2124",
+							"path": [
+								"auth",
+								"login"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "login success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "228"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"e4-5+SfEH/y/C7+wzEHpIQYRozsCH8\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:23:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Login successfully\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX2VtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwidXNlcl9pZCI6MSwiaWF0IjoxNjY3MDQyNjI3LCJleHAiOjE2Njc2NDc0Mjd9.Un8BCBz6RMUkAehmOnPzl5bxmdNwvHP6wgxT2P0Kvgs\"\n}"
+						},
+						{
+							"name": "login invalid password",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"admin@gmail.com\",\n    \"password\":\"aaa\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "30"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1e-PvqgqjiSsn+tQQwY1tAq1BFwX0M\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:24:04 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid password\"\n}"
+						},
+						{
+							"name": "login in valid email",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\n    \"email\":\"ss@gmail.com\",\n    \"password\":\"admin\"\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "localhost:2124/auth/login",
+									"host": [
+										"localhost"
+									],
+									"port": "2124",
+									"path": [
+										"auth",
+										"login"
+									]
+								}
+							},
+							"status": "Internal Server Error",
+							"code": 500,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "44"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"2c-fOyN9E59ZH1leowNMZhx5ZZpars\""
+								},
+								{
+									"key": "Date",
+									"value": "Sat, 29 Oct 2022 11:24:25 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"message\": \"Invalid email! User not found.\"\n}"
+						}
+					]
+				}
+			]
+		}
+	]
+}
